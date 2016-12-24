@@ -222,6 +222,8 @@ bindsym $mod+m exec thunar
 exec_always feh --bg-scale /home/dfuse/walls/wallpaper.jpg
 exec xcompmgr
 exec --no-startup-id dropbox
+bindsym $mod+u exec "~/scripts/i3lock.sh"
+exec xautolock -time 15 -locker '~/scripts/i3lock.sh' &
 
 
 # Pulse Audio controls
@@ -232,9 +234,6 @@ bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-
-# Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
