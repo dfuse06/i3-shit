@@ -218,12 +218,14 @@ bindsym $mod+c exec google-chrome-stable
 bindsym $mod+m exec thunar
 
 # Start-up
+exec --no-startup-id i3lock -i ~/Pictures/lock.png
 exec_always feh --bg-scale /home/dfuse/walls/wallpaper.jpg
 exec xcompmgr
 exec --no-startup-id dropbox
 bindsym $mod+u exec "~/scripts/i3lock.sh""
 #exec xautolock -time 15 -locker '~/scripts/i3lock.sh' &
 exec --no-startup-id nm-applet
+
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
